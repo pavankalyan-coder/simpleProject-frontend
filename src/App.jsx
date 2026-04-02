@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div style={{ textAlign: "center", marginTop: "100px" }}>
-      <h2>Message from backend is: {message}</h2>
+      <h2>Message is being sent from django backend, which is deployed in render: {message}</h2>
     </div>
   );
 }
