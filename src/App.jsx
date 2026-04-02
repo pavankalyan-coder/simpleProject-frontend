@@ -1,0 +1,20 @@
+import { useEffect, useState } from "react";
+
+function App() {
+  const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    fetch("https://simpleproject-216h.onrender.com/api/message/")
+      .then(res => res.json())
+      .then(data => setMessage(data.message));
+  }, []);
+
+  return (
+    <div style={{ textAlign: "center", marginTop: "100px" }}>
+      <h1>React + Django (Vite)</h1>
+      <h2>{message}</h2>
+    </div>
+  );
+}
+
+export default App;
